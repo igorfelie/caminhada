@@ -24,7 +24,7 @@ def process_image(uploaded_image):
             user_image.thumbnail((box_width, box_height))  # Mantém a proporção da imagem
 
             # Calcular a posição para centralizar a imagem no quadrado branco
-            x_offset = left + (box_width - user_image.width) // 2 + 50  # Deslocamento para a direita
+            x_offset = left + (box_width - user_image.width) // 2 + 25  # Deslocamento para a direita
             y_offset = top + (box_height - user_image.height) // 2
 
             # Colocar a imagem do usuário dentro do quadrado branco da imagem base
@@ -46,7 +46,7 @@ def save_image(image):
     return img_byte_arr
 
 def main():
-    st.title("Envio de Imagem")
+    st.title("Envie sua foto aqui")
 
     # Carregar o arquivo da imagem do usuário
     uploaded_image = st.file_uploader("Carregue sua imagem", type=["png", "jpg", "jpeg"])
