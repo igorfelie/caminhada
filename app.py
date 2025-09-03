@@ -3,11 +3,10 @@ from PIL import Image
 import io
 
 def process_image(uploaded_image):
-    # Caminho da imagem base (agora no repositório)
     try:
-        # A imagem editavel.png está na pasta "images"
-        base_image = Image.open("images/editavel.png")  # Certifique-se de que você tenha a imagem no repositório
-        
+        # A imagem editavel.png está no mesmo diretório que o app.py
+        base_image = Image.open("editavel.png")  # Referência direta ao arquivo
+
         if uploaded_image is not None:
             user_image = Image.open(uploaded_image)
 
