@@ -24,7 +24,7 @@ def process_image(uploaded_image):
             user_image.thumbnail((box_width, box_height))  # Mantém a proporção da imagem
 
             # Calcular a posição para centralizar a imagem no quadrado branco
-            x_offset = left + (box_width - user_image.width) // 2 + 15  # Deslocamento para a direita
+            x_offset = left + (box_width - user_image.width) // 2 + 60  # Deslocamento para a direita
             y_offset = top + (box_height - user_image.height) // 2
 
             # Colocar a imagem do usuário dentro do quadrado branco da imagem base
